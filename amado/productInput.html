@@ -316,11 +316,12 @@
                 </div>
             </div>
         </div>
-                <form action="" method="">
+                <!-- <form action="" method="">
         <input type='file' id="imgInp" />
         <img id="foo"src="#" />
-    </form>
-
+    </form> -->
+        <input  multiple  class="multi with-preview"/>
+        <input multiple class="multi with-preview">
 
     </section>
     <!-- ##### Newsletter Area End ##### -->
@@ -378,9 +379,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+
+    <!-- <script src="js/jquery/jquery-2.2.4.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" language="javascript"></script>
     <!-- datepicker css,js -->
-   
+   <script src="//github.com/fyneworks/multifile/blob/master/jquery.MultiFile.min.js" type="text/javascript" language="javascript"></script>
     <script src="datepicker.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
@@ -390,49 +393,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <!-- MultiFile js -->
 
     <script type="text/javascript">
         $('[data-toggle="datepicker"]').datepicker();
+         $(function(){
+  
+  // use a different language
+  // $file prints the file name
+  // $ext prints the file extension
+
+  // invoke plugin
+ 
     </script>
-    <script type="text/javascript">
+   <script type="text/javascript">
+      
+   </script>
 
-                                $(document).ready(function(){
-
-                                    $("#fileInput").on('change', function(){  // 값이 변경되면
-
-                                        if(window.FileReader){  // modern browser
-
-                                            var filename = $(this)[0].files[0].name;
-
-                                        } else {  // old IE
-
-                                            var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
-
-                                        }
-                                        // 추출한 파일명 삽입
-
-                                        $("#userfile").val(filename);
-
-                                    });
-
-                                });
-
-                                </script>
-                                <script type="text/javascript">
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#foo').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#imgInp").change(function() {
-        readURL(this);
-    });
-<script>
 
 
 </body>
